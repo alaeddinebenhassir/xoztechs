@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+p{
+    font-family: 'Source Code Pro';
+}
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #0a0a0b;
+}
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #19cc19;
+  bottom: 0;
+  left: calc(50% - 20px);}
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);}
+#parent {
+    text-align: center;
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden; 
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(4, 252, 37, 0.979);
+  position: relative;
+}
+
+#border {
+  border-bottom: solid 3px rgba(0,255,0,.75);
+  position: absolute;
+  right: -7px;
+  width: 20px;
+}
+/* Animation */
+#parent {
+  animation: animated-text 4s steps(60,end) 1s 1 normal both
+}
+
+#border {
+   animation: blink 0.7s infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 760px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+        .dropdown-toggle::after {
+    display: none;
+  }
+.text-decoration-none{
+  text-decoration: none!important;
+}
+/* Font Awesome Icons have variable width. Added fixed width to fix that.*/
+.icon-width { width: 2rem;}
